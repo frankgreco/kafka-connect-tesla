@@ -12,9 +12,11 @@ import java.util.Map;
 
 public class TeslaSourceConnector extends SourceConnector {
     private TeslaSourceConnectorConfig config;
+    private Map<String, String> originalProps;
 
     public void start(Map<String, String> map) throws ConfigException {
         try {
+            originalProps = map;
             config = new TeslaSourceConnectorConfig(map);
         } catch (ConfigException e) {
             throw new ConfigException("TeslaSourceConnector failed to start due to a configuration error: ", e);
@@ -47,7 +49,7 @@ public class TeslaSourceConnector extends SourceConnector {
         }
 
         for (String k : vehicleNames) {
-            Map<String, String> taskSettings = new HashMap<>();
+            Map<String, String> taskSettings = new HashMap<>(originalProps);
 
             if (k != null && !k.isEmpty()) {
                 taskSettings.put(TeslaSourceTask.TESLA_VEHICLE_NAME_CONF, k);
