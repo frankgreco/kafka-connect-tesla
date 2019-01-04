@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.github.frankgreco</groupId>
+    <artifactId>kafka-connect-tesla</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <name>kafka-connect-tesla</name>
+    <description>Kafka Connect plugin for streaming data from Tesla to Kafka.</description>
+
+    <licenses>
+        <license>
+            <name>Apache License 2.0</name>
+            <url>https:/github.com/frankgreco/kafka-connect-tesla/LICENSE</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>frankgreco</id>
+            <name>Frank B Greco Jr</name>
+            <url>https://github.com/frankgreco</url>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:https://github.com/frankgreco/kafka-connect-tesla.git</connection>
+        <developerConnection>scm:git:git@github.com:frankgreco/kafka-connect-tesla.git</developerConnection>
+        <url>https://github.com/frankgreco/kafka-connect-tesla</url>
+    </scm>
+
+    <issueManagement>
+        <system>github</system>
+        <url>https://github.com/frankgreco/kafka-connect-tesla/issues</url>
+    </issueManagement>
+
+    <properties>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>connect-api</artifactId>
+            <version>2.1.0</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
